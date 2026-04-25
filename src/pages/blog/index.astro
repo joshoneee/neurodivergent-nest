@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogCard from '../../components/BlogCard.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const sortedPosts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const categories = [...new Set(allPosts.map(p => p.data.category))];
+---
+
+<Layout
+  title="Blog"
+  description="Practical articles on ADHD organization, productivity, money systems, work, and relationships — built for neurodivergent adults."
+>
+  <section class="bg-gradient-to-b from-violet-50 to-white py-14 px-4 sm:px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="text-4xl font-extrabold text-stone-900 mb-4">All Articles</h1>
+      <p class="text-lg text-stone-500">
+        Science-backed, zero-judgment guides for ADHD and neurodivergent adults.
+      </p>
+    </div>
+  </section>
+
+  <!-- Category filter -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-6">
+    <div class="flex flex-wrap gap-2">
+      <span class="px-4 py-2 bg-violet-600 text-white text-sm font-medium rounded-full cursor-pointer">All</span>
+      {categories.map(cat => (
+        <span class="px-4 py-2 bg-stone-100 text-stone-600 text-sm font-medium rounded-full hover:bg-violet-100 hover:text-violet-600 cursor-pointer transition-colors">
+          {cat}
+        </span>
+      ))}
+    </div>
+  </section>
+
+  <!-- Post Grid -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {sortedPosts.map(post => (
+        <BlogCard
+          title={post.data.title}
+          description={post.data.description}
+          slug={post.slug}
+          pubDate={post.data.pubDate}
+          category={post.data.category}
+          featured={post.data.featured}
+        />
+      ))}
+    </div>
+  </section>
+</Layout>

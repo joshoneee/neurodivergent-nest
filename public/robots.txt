@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://neurodivergent-nest.vercel.app/sitemap-index.xml

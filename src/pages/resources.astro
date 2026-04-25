@@ -1,0 +1,199 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const categories = [
+  {
+    id: 'apps',
+    title: 'Apps & Software',
+    icon: '📱',
+    items: [
+      {
+        name: 'Structured',
+        tagline: 'Visual day planner built for ADHD',
+        description: 'A timeline-based daily planner that makes your day visual and concrete. No more abstract to-do lists — you literally see your time.',
+        badge: 'Editor\'s Pick',
+        badgeColor: 'violet',
+        link: '#',
+        price: 'Free / $4.99/mo',
+      },
+      {
+        name: 'Focusmate',
+        tagline: 'Virtual body doubling on demand',
+        description: 'Book 25- or 50-minute sessions with a real accountability partner over video. Body doubling is one of the most effective ADHD productivity tools.',
+        badge: 'Most Loved',
+        badgeColor: 'teal',
+        link: '#',
+        price: 'Free / $6.99/mo',
+      },
+      {
+        name: 'Notion',
+        tagline: 'All-in-one ADHD command center',
+        description: 'Build your own second brain. Use templates to manage projects, notes, goals, and habits in one place — fully customisable to how your brain works.',
+        badge: 'Best Value',
+        badgeColor: 'amber',
+        link: '#',
+        price: 'Free / $10/mo',
+      },
+      {
+        name: 'Finch',
+        tagline: 'Self-care app with a tiny bird friend',
+        description: 'Gamified self-care that makes checking in with yourself feel rewarding. Brilliant for ADHD adults who need external motivation for basic self-care.',
+        badge: null,
+        badgeColor: null,
+        link: '#',
+        price: 'Free / $4.99/mo',
+      },
+    ],
+  },
+  {
+    id: 'physical',
+    title: 'Physical Tools',
+    icon: '📦',
+    items: [
+      {
+        name: 'Rocketbook Everlast',
+        tagline: 'Reusable smart notebook',
+        description: 'Write notes by hand (often better for ADHD recall), scan them to the cloud, then wipe clean with a damp cloth. Never lose a note again.',
+        badge: 'Top Rated',
+        badgeColor: 'violet',
+        link: '#',
+        price: '~$32',
+      },
+      {
+        name: 'Fidget Cube',
+        tagline: 'Sensory regulation for focus',
+        description: "Keep your hands busy during calls, meetings, or reading. Proven to improve focus in ADHD adults who need sensory stimulation to stay on task.",
+        badge: null,
+        badgeColor: null,
+        link: '#',
+        price: '~$15',
+      },
+      {
+        name: 'Time Timer',
+        tagline: 'Visual time made concrete',
+        description: 'A visual timer that shows time disappearing as a shrinking red disk. Essential for time-blindness — actually SEEING time pass changes everything.',
+        badge: 'Editor\'s Pick',
+        badgeColor: 'violet',
+        link: '#',
+        price: '~$30',
+      },
+    ],
+  },
+  {
+    id: 'books',
+    title: 'Books We Recommend',
+    icon: '📚',
+    items: [
+      {
+        name: 'Driven to Distraction',
+        tagline: 'Hallowell & Ratey — The ADHD bible',
+        description: 'The foundational ADHD book by two psychiatrists with ADHD. Compassionate, clinical, and life-changing. Read this first.',
+        badge: 'Essential Read',
+        badgeColor: 'violet',
+        link: '#',
+        price: '~$14',
+      },
+      {
+        name: 'Smart but Stuck',
+        tagline: 'Thomas E. Brown — Executive function in depth',
+        description: 'Explains the executive function impairments behind ADHD with vivid case studies. Helps you finally understand WHY you struggle with "simple" tasks.',
+        badge: null,
+        badgeColor: null,
+        link: '#',
+        price: '~$16',
+      },
+      {
+        name: 'The ADHD Advantage',
+        tagline: 'Dale Archer — Reframe the narrative',
+        description: 'Explores how ADHD traits become genuine strengths in the right environment. Great for rebuilding self-esteem after years of "not trying hard enough."',
+        badge: null,
+        badgeColor: null,
+        link: '#',
+        price: '~$13',
+      },
+    ],
+  },
+];
+
+const badgeStyles: Record<string, string> = {
+  violet: 'bg-violet-100 text-violet-700',
+  teal: 'bg-teal-100 text-teal-700',
+  amber: 'bg-amber-100 text-amber-700',
+};
+---
+
+<Layout
+  title="Resources"
+  description="Curated apps, tools, planners, and books for ADHD and neurodivergent adults. Everything we recommend, we actually use."
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-violet-50 to-white py-14 px-4 sm:px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="text-4xl font-extrabold text-stone-900 mb-4">Tools & Resources</h1>
+      <p class="text-lg text-stone-500 mb-3">
+        Everything we recommend has been tested by neurodivergent people in real life. No paid placements, no fluff.
+      </p>
+      <p class="text-sm text-stone-400">
+        Some links are affiliate links — we earn a small commission at no extra cost to you. This keeps the site free.
+      </p>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-4">
+    <div class="flex flex-wrap gap-3 justify-center">
+      {categories.map(cat => (
+        <a href={`#${cat.id}`} class="px-4 py-2 bg-stone-100 text-stone-600 text-sm font-medium rounded-full hover:bg-violet-100 hover:text-violet-600 transition-colors">
+          {cat.icon} {cat.title}
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Resource Sections -->
+  {categories.map(cat => (
+    <section id={cat.id} class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+      <h2 class="text-2xl font-bold text-stone-900 mb-8 flex items-center gap-3">
+        <span>{cat.icon}</span> {cat.title}
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {cat.items.map(item => (
+          <div class="card relative">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div>
+                <h3 class="font-bold text-stone-900 text-lg">{item.name}</h3>
+                <p class="text-sm text-violet-600 font-medium">{item.tagline}</p>
+              </div>
+              {item.badge && (
+                <span class={`shrink-0 px-2 py-1 text-xs font-semibold rounded-full ${badgeStyles[item.badgeColor!] || ''}`}>
+                  {item.badge}
+                </span>
+              )}
+            </div>
+            <p class="text-stone-500 text-sm leading-relaxed mb-4">{item.description}</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-medium text-stone-400">{item.price}</span>
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm font-semibold text-violet-600 hover:text-violet-700 transition-colors"
+              >
+                Learn more →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  ))}
+
+  <!-- Affiliate disclaimer -->
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 pb-16">
+    <div class="bg-stone-50 border border-stone-200 rounded-xl p-6 text-sm text-stone-500 text-center">
+      <strong class="text-stone-700">Affiliate Disclosure:</strong> Some links on this page are affiliate links.
+      If you purchase through them, we earn a small commission at no extra cost to you.
+      We only recommend tools we genuinely believe in.
+    </div>
+  </section>
+</Layout>

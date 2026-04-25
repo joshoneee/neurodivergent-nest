@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Privacy Policy">
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 py-16">
+    <h1 class="text-3xl font-bold text-stone-900 mb-8">Privacy Policy</h1>
+    <div class="prose-custom">
+      <p>Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+      <h2>Information We Collect</h2>
+      <p>We collect email addresses only when you voluntarily subscribe to our newsletter. We do not sell your data to any third party.</p>
+      <h2>Cookies</h2>
+      <p>We use basic analytics cookies (via Vercel Analytics) to understand how people use the site. No personally identifying data is collected.</p>
+      <h2>Third-Party Links</h2>
+      <p>This site contains affiliate links. Clicking these may set cookies on your device via the linked sites. We are not responsible for third-party privacy practices.</p>
+      <h2>Contact</h2>
+      <p>Questions? Email <a href="mailto:hello@neurodivergent-nest.vercel.app">hello@neurodivergent-nest.vercel.app</a></p>
+    </div>
+  </section>
+</Layout>
