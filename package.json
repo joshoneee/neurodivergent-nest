@@ -7,6 +7,9 @@
     "build": "astro build",
     "preview": "astro preview"
   },
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "dependencies": {
     "@astrojs/rss": "^4.0.7",
     "@astrojs/sitemap": "^3.2.0",
