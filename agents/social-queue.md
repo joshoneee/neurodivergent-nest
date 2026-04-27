@@ -4,6 +4,58 @@ This file is updated weekly by the content agent. Use this content to schedule p
 
 ---
 
+## Week of April 27, 2026 — ADHD and Sleep
+
+**Pinterest Pin 1:**
+Title: Why ADHD Makes It Impossible to Fall Asleep (And What Actually Helps)
+Description: It's not bad habits — ADHD causes a delayed circadian rhythm, racing thoughts at bedtime, and sensory sensitivity that makes sleep genuinely hard. Here's the science and 8 strategies that work.
+Link: /blog/adhd-and-sleep
+Hashtags: #ADHD #ADHDSleep #Neurodivergent #SleepTips #ADHDAdult
+
+**Pinterest Pin 2:**
+Title: ADHD Night Owl? Here's Why Your Brain Won't Switch Off at Bedtime
+Description: Racing thoughts, delayed melatonin, sensory overload — ADHD sleep problems are neurological, not a willpower issue. Practical fixes inside.
+Link: /blog/adhd-and-sleep
+Hashtags: #ADHDTips #SleepHacks #NeurodivergentLife #Insomnia #ADHDBrain
+
+**Pinterest Pin 3:**
+Title: 8 Sleep Strategies That Actually Work for ADHD Adults
+Description: From delayed circadian rhythm to racing thoughts — a complete guide to ADHD sleep problems and the evidence-backed fixes that help.
+Link: /blog/adhd-and-sleep
+Hashtags: #ADHD #NeurodivergentNest #SleepRoutine #ADHDSleep #BedtimeRoutine
+
+---
+
+**Instagram Caption — ADHD Sleep Post:**
+
+It's midnight. You're exhausted. You've been tired since 3pm. And yet. 👀
+
+Your brain has decided THIS is the perfect time to:
+→ Replay every cringeworthy moment from 2017
+→ Plan a business idea you'll probably never start
+→ Wonder if you left the oven on
+
+This is not a discipline problem. This is ADHD neurology.
+
+ADHD brains have a delayed circadian rhythm (melatonin kicks in hours later than average), struggle to transition away from stimulation, and can experience sensory sensitivity that makes lying still in a dark room genuinely uncomfortable.
+
+What actually helps:
+🕯️ A wind-down ritual (not a rigid routine)
+💡 Dimming lights from 9pm
+📓 Brain dump before bed — get the thoughts OUT of your head
+🌡️ Cool room + weighted blanket
+⏰ Working WITH your natural sleep window, not against it
+
+Full guide on the blog — link in bio.
+
+You're not bad at sleeping. Your brain just needs a different approach.
+.
+.
+.
+#ADHD #ADHDSleep #Neurodivergent #NeurodivergentLife #ADHDAdult #SleepTips #ADHDTips #BedtimeRoutine #NeurodivergentNest #ADHDBrain #SleepProblems #ADHDAwareness #ADHDWomen #MentalHealth #NightOwl
+
+---
+
 ## Week of April 28, 2025
 
 ### Source Post: The Body Double Method
