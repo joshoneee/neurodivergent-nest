@@ -1,9 +1,11 @@
 ---
+const base = import.meta.env.BASE_URL;
+
 const navLinks = [
-  { href: '/blog', label: 'Articles' },
-  { href: '/resources', label: 'Resources' },
-  { href: '/newsletter', label: 'Newsletter' },
-  { href: '/about', label: 'About' },
+  { href: `${base}blog`, label: 'Articles' },
+  { href: `${base}resources`, label: 'Resources' },
+  { href: `${base}newsletter`, label: 'Newsletter' },
+  { href: `${base}about`, label: 'About' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -13,7 +15,7 @@ const currentPath = Astro.url.pathname;
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 group">
+      <a href={base} class="flex items-center gap-2 group">
         <div class="w-8 h-8 bg-violet-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">
           NN
         </div>
@@ -36,7 +38,7 @@ const currentPath = Astro.url.pathname;
             {link.label}
           </a>
         ))}
-        <a href="/newsletter" class="ml-2 btn-primary text-sm py-2 px-4">
+        <a href={`${base}newsletter`} class="ml-2 btn-primary text-sm py-2 px-4">
           Get the Newsletter
         </a>
       </nav>
@@ -63,7 +65,7 @@ const currentPath = Astro.url.pathname;
           {link.label}
         </a>
       ))}
-      <a href="/newsletter" class="mt-3 block text-center btn-primary text-sm">
+      <a href={`${base}newsletter`} class="mt-3 block text-center btn-primary text-sm">
         Get the Newsletter
       </a>
     </nav>
